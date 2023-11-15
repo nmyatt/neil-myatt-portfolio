@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./LibreBaskerville-Bold:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/index.css" />
+    <title>Neil Myatt - Creative Dev</title>
+    <script>
+      /* this is a kindof hack to manipulate the DOM to prevent iOS scroll bounce */
+      const observeUrlChange = () => {
+      let oldHref = document.location.href;
+      const body = document.querySelector("body");
+      const observer = new MutationObserver(mutations => {
+        if (oldHref !== document.location.href) {
+          oldHref = document.location.href;
+          const urlRoute = document.location.href.split("/")[3];
+          if (urlRoute === "") {
+            body.style.overflow = "hidden";
+            body.style.overscrollBehavior = "none";
+          } else {
+            body.style.overflow = "auto";
+            body.style.overscrollBehavior = "auto";
+          }
+        }
+      });
+      observer.observe(body, { childList: true, subtree: true });
+    };
+
+    window.onload = observeUrlChange;
+    </script>
+  </head>
+  <body class="m-0 p-0 overflow-x-hidden overflow-y-auto bg-zinc-100 text-zinc-500">
+    <div id="root" class="w-screen h-screen"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
