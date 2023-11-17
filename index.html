@@ -8,26 +8,34 @@
     <title>Neil Myatt - Creative Dev</title>
     <script>
       /* this is a kindof hack to manipulate the DOM to prevent iOS scroll bounce */
-      const observeUrlChange = () => {
-      let oldHref = document.location.href;
-      const body = document.querySelector("body");
-      const observer = new MutationObserver(mutations => {
-        if (oldHref !== document.location.href) {
-          oldHref = document.location.href;
-          const urlRoute = document.location.href.split("/")[3];
-          if (urlRoute === "") {
+      const hideScrollBars = (hide) => {        
+        const body = document.querySelector("body");
+        if (hide) {
             body.style.overflow = "hidden";
             body.style.overscrollBehavior = "none";
           } else {
             body.style.overflow = "auto";
             body.style.overscrollBehavior = "auto";
           }
-        }
-      });
-      observer.observe(body, { childList: true, subtree: true });
+      }
+
+      const observeUrlChange = () => {
+        let oldHref = document.location.href;
+        const body = document.querySelector("body");        
+        const observer = new MutationObserver(mutations => {
+          if (oldHref !== document.location.href) {
+            oldHref = document.location.href;
+            const urlRoute = oldHref.split("/")[3];
+            hideScrollBars(urlRoute === "");
+          }
+        });
+        observer.observe(body, { childList: true, subtree: true });
     };
 
-    window.onload = observeUrlChange;
+    window.onload = () => {
+      hideScrollBars();
+      observeUrlChange;
+    }
     </script>
   </head>
   <body class="m-0 p-0 overflow-hidden overscroll-none` bg-zinc-100 text-zinc-500">
