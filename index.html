@@ -11,10 +11,10 @@
       const hideScrollBars = (hide) => {        
         const body = document.querySelector("body");
         if (hide) {
-            body.style.overflow = "hidden";
+            body.style.overflowY = "hidden";
             body.style.overscrollBehavior = "none";
           } else {
-            body.style.overflow = "auto";
+            body.style.overflowY = "auto";
             body.style.overscrollBehavior = "auto";
           }
       }

@@ -27,9 +27,9 @@ const PortfolioItem = ({children, title, description, image, vimeo, type, role, 
             <ImageWithVideo showVideo={showVideo} vimeo={vimeo} image={image} title={title} />
             <div className="mt-4 text-2xl">{title}</div>
             {type && <div className="mt-4 text-sm">Project: {type}</div>}
-            {role && <div className="mt-4 text-sm">Role: {role}</div>}
-            {link && <button className="mt-4 rounded-md bg-blue-400 hover:bg-blue-600 active:bg-blue-700 text-white shadow-md w-full px-8 py-2" onClick={openLink}>{linkName ?? "Case Study"}</button>}
+            {role && <div className="mt-4 text-sm">Role: {role}</div>}            
             <div className="mt-4">{description}</div>
+            {link && <button className="mt-4 rounded-md bg-blue-400 hover:bg-blue-500 active:bg-blue-500 text-white shadow-md shadow-gray-500 w-full px-8 py-2" onClick={openLink}>{"find out more..."}</button>}
             {children}
         </Card>
     )
