@@ -23,7 +23,7 @@ const AboutMe = () => {
                 
                 <P1 addClasses="border-l-4 border-pink-400 rounded px-12 py-6 bg-white">Fundamentally, I like being at the coal-face. I like starting with a blank sheet of paper and a diverse team of people, and just start iterating. I'm not a fan of complex corporate hierarchies and departmental silos - I think communication flows better horizontally and without bottlenecks.</P1>
 
-                <P1>In my spare time I play bass guitar and synth. I've learned a lot about sound design over the years and i'm always looking for the opportunity to bring that into a creative project!</P1>
+                <P1>In my spare time I play bass guitar and synth. I'm also serious about photography (<a href="https://www.instagram.com/themyatt_photobestiary/" className="text-blue-500 underline hover:text-blue-800">for example...</a>). I've learned a lot about sound design over the years and i'm always looking for the opportunity to bring that into a creative project!</P1>
                 
 
             </Section1>
@@ -89,7 +89,7 @@ const AboutMe = () => {
             
             <Section1>
                 <h1 className="my-16 text-6xl leading-none tracking-tight text-zinc-400">One other thing...</h1>
-                <P1>Every photo, illustration, 3D graphic and animation on this site is an original work created by me. Yep, even the peg people on the 404 error page.</P1>    
+                <P1>Every photo, illustration, 3D graphic and animation on this site is an original work created by me. I mean, i'm not averse to using stock assets, I just didn't for this site.</P1>    
             </Section1>
         </PageLayout>
     )

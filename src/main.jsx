@@ -1,5 +1,5 @@
 
-import React, { createRef } from 'react'
+import { lazy, createRef } from 'react'
 import { createRoot } from 'react-dom/client'
 import {
   createBrowserRouter,

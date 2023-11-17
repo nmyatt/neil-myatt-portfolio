@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react'
+import { Suspense, memo, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { useGLTF, OrthographicCamera } from '@react-three/drei'
 import * as THREE from 'three'
@@ -9,7 +9,7 @@ import WaterColourExperience from './experienceComponents/WaterColourExperience'
 
 // import { Leva } from 'leva'
 
-const Experience = () => {
+const Experience = memo(() => {
 
     useEffect(() => {
         // to prevent scrolling on pesky iOS
@@ -25,6 +25,7 @@ const Experience = () => {
             <div id="experience" className="absolute w-full h-full">
                 <Canvas
                     //linear={false}
+                    frameloop="demand"
                     className="cursor-pointer pt-8"
                     dpr={[1, 1.5]} 
                     gl={ {
@@ -43,7 +44,7 @@ const Experience = () => {
             </div>
         </Suspense>
     )
-}
+})
 
 export default Experience
 
