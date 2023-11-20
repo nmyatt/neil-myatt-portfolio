@@ -1,4 +1,4 @@
-import { Suspense, memo, useEffect } from 'react'
+import { Suspense, memo } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { useGLTF, OrthographicCamera } from '@react-three/drei'
 import * as THREE from 'three'
@@ -10,14 +10,6 @@ import WaterColourExperience from './experienceComponents/WaterColourExperience'
 // import { Leva } from 'leva'
 
 const Experience = memo(() => {
-
-    useEffect(() => {
-        // to prevent scrolling on pesky iOS
-        console.log('foo')
-        document.ontouchmove = (e) => {
-            e.preventDefault()
-        }
-    },[])
 
     return (
         <Suspense fallback={<Loading />}>

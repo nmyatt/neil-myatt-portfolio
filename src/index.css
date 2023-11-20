@@ -12,7 +12,9 @@
 }
 
 /* fix iOS scroll bounce */
+html,
 body {
+  position: fixed;
   overflow: hidden;
   overscroll-behavior: none;
 }

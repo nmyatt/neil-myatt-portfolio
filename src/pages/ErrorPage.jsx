@@ -8,8 +8,8 @@ const ErrorPage = () => {
     return (
         <div id="error-page" className="h-screen flex items-center justify-center">
             <div className="flex flex-col items-center">
-                <h1 className="text-3xl text-black text-zinc-500 my-8">Oops. That didn't work...</h1>
-                <div className="text-8xl text-black text-zinc-500 leading-tight">{error.status ?? "666"}</div>
+                <h1 className="text-3xl font-black text-zinc-500 my-8">Oops. That didn't work...</h1>
+                <div className="text-8xl font-black text-zinc-500 leading-tight">{error.status ?? "666"}</div>
                 <p className="text-2xl justify-center my-2"><i>{error.statusText || error.message}</i></p>
                 <a href="/">
                     <div className="flex flex-col items-center justify-center my-8">

@@ -11,9 +11,11 @@
       const hideScrollBars = (route) => {
         const body = document.querySelector("body");
         if (route === "") {
+            body.style.position = "fixed";
             body.style.overflowY = "hidden";
             body.style.overscrollBehavior = "none";
           } else {
+            body.style.position = "unset";
             body.style.overflowY = "auto";
             body.style.overscrollBehavior = "auto";
           }
