@@ -17,6 +17,8 @@ body {
   position: fixed;
   overflow: hidden;
   overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* fix horizontal jumping when */

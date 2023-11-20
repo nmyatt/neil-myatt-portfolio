@@ -1,4 +1,5 @@
 import NavUpDown from './NavUpDown'
+import ScrollUpArrow from './ScrollUpArrow'
 import linkedin from '../assets/linkedin.svg'
 import instagram from '../assets/instagram.svg'
 import FooterNav from './FooterNav'
@@ -6,7 +7,7 @@ import FooterNav from './FooterNav'
 const Footer = () => {
     return (
         <>
-            <NavUpDown target="top" label="Page top" />            
+            <ScrollUpArrow />
             <footer className="w-full flex flex-col bg-gray-800 text-gray-500 px-8 py-4 justify-center items-center">
                 <p className="text-center text-xs">FYI: this site was hand-coded using mainly React, THREE, GLSL and Tailwind.</p>
                 <FooterNav />

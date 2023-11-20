@@ -10,12 +10,15 @@
       /* this is a kindof hack to manipulate the DOM to prevent iOS scroll bounce */
       const hideScrollBars = (route) => {
         const body = document.querySelector("body");
+        const html = document.querySelector("html");
         if (route === "") {
+            html.style.position = "fixed";
             body.style.position = "fixed";
             body.style.overflowY = "hidden";
             body.style.overscrollBehavior = "none";
           } else {
-            body.style.position = "unset";
+            html.style.position = "relative";
+            body.style.position = "relative";
             body.style.overflowY = "auto";
             body.style.overscrollBehavior = "auto";
           }

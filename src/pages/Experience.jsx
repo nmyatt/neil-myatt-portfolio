@@ -17,7 +17,7 @@ const Experience = memo(() => {
             <div id="experience" className="absolute w-full h-full">
                 <Canvas
                     //linear={false}
-                    frameloop="demand"
+                    // frameloop="demand" 
                     className="cursor-pointer pt-8"
                     dpr={[1, 1.5]} 
                     gl={ {
