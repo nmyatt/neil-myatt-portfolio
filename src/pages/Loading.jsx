@@ -1,5 +1,18 @@
 import { motion } from 'framer-motion'
-const Loading = () => {
+
+const Loading = () => {    
+
+    const messages = [
+        "Hang in there - preparing awesomeness!",
+        "Mixing paint and pixels...",
+        "Imps are working hard to get the page ready",
+        "Crunching numbers...",
+        "Getting a bunch of pixels to line up...",
+        "Calculating some bubble physics...",
+        "How are you today?"
+    ]
+    
+    const randomMessage =  messages[Math.floor(Math.random() * messages.length)]
 
     return (
         <div className="h-screen flex flex-col items-center justify-center">
@@ -17,7 +30,7 @@ const Loading = () => {
             </div>
             <div className="flex flex-col items-center mt-4 z-20">
                 <h1 className="text-5xl text-white font-black leading-none tracking-tight mb-8">Loading...</h1>
-                <p className="text-md text-white">Hang in there - preparing the awesome!</p>
+                <p className="text-md text-white">{randomMessage}</p>
             </div>
         </div>        
     )
