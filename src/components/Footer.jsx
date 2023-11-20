@@ -1,4 +1,3 @@
-import NavUpDown from './NavUpDown'
 import ScrollUpArrow from './ScrollUpArrow'
 import linkedin from '../assets/linkedin.svg'
 import instagram from '../assets/instagram.svg'

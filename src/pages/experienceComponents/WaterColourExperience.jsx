@@ -1,5 +1,6 @@
 import { MarchingCubes, MeshTransmissionMaterial, Environment, Bounds, useTexture } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
+import { useThree } from '@react-three/fiber'
 import MetaBall from './MetaBall'
 import Pointer from './Pointer'
 import HeroText from './HeroText'
@@ -8,11 +9,39 @@ import AnimatedPencils from './AnimatedPencils'
 import paintPaper from '../../assets/paint-paper.jpg'
 import mugShot from '../../assets/mugshot.jpg'
 import env from '../../assets/artist_workshop_1k.hdr'
+import { useRef, useState, useEffect } from 'react'
 
 const Experience = () => {
 
+  const { gl } = useThree()
+  const preferredMaterial = <MeshTransmissionMaterial
+      vertexColors
+      transmissionSampler
+      transmission={0.95}
+      thickness={0.02}
+      roughness={0}
+      chromaticAberration={0.1}
+      anisotropy={0.1}
+      envMapIntensity={0.2}
+      distortion={0.5}
+      distortionScale={0.1}
+      temporalDistortion={0.1}
+      iridescence={0.1}
+      iridescenceIOR={0.2}
+      iridescenceThicknessRange={[500, 1400]}
+      toneMapped={true}
+    />
+  const fallbackMaterial = <meshStandardMaterial vertexColors transparent toneMapped={true} opacity={0.9}/>
+
   const PI = Math.PI
   const dimensions = [2.1,2.1]
+  
+  const blobs = useRef()  
+  const [error, setError] = useState(false)
+  
+  gl.debug.onShaderError = (e) => {
+    setError(true)
+  }
 
   return (
     <>
@@ -20,26 +49,9 @@ const Experience = () => {
         <planeGeometry args={dimensions} />
         <meshStandardMaterial map={useTexture(paintPaper)} />        
       </mesh>
-
       <Physics gravity={[0, 0, 0]} debug={false} >
-        <MarchingCubes resolution={80} maxPolyCount={20000} enableUvs={false} enableColors>
-          <MeshTransmissionMaterial
-            vertexColors
-            transmissionSampler
-            transmission={0.95}
-            thickness={0.02}
-            roughness={0}
-            chromaticAberration={0.1}
-            anisotropy={0.1}
-            envMapIntensity={0.2}
-            distortion={0.5}
-            distortionScale={0.1}
-            temporalDistortion={0.1}
-            iridescence={0.1}
-            iridescenceIOR={0.2}
-            iridescenceThicknessRange={[500, 1400]}
-            toneMapped={true}
-          />          
+        <MarchingCubes ref={blobs} resolution={80} maxPolyCount={20000} enableUvs={false} enableColors >
+            {error ? fallbackMaterial : preferredMaterial}
             <MetaBall color="tomato" position={[0, 0, 0]} />
             <MetaBall color="yellow" position={[0, 0, 0]} />
             <MetaBall color="lightgreen" position={[0, 0, 0]} />
