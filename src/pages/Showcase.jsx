@@ -4,6 +4,7 @@ import PageLayout from "../components/PageLayout"
 import PortfolioItem from "../components/PortfolioItem"
 
 import tdmSunderland from "../assets/showcase-images/tdm-sunderland.jpg"
+import mipworld from "../assets/showcase-images/mipworld.jpg"
 
 const showcaseItems = [
     { 
@@ -12,12 +13,19 @@ const showcaseItems = [
         title: "TDM Sunderland ident animation",
         description: "A short animation created for a YouTube channel about Sunderland AFC.",
         link: "tdm-sunderland"
-    }
+    },
+    { 
+        image: mipworld,
+        title: "Mipworld - game prototype",
+        description: "Just a little prototype of a back-burner game I'm working on.",
+        exLink: "https://mipworld.vercel.app/"
+    },
+
 ]
 
 const Showcase = () => {
     return(
-        <PageLayout title="Showcase">
+        <PageLayout title="Fun Stuff">
             <Section1>
                
                 <p className="text-2xl mb-8">Some more visual and/or interactive projects.</p>
@@ -33,6 +41,7 @@ const Showcase = () => {
                                 title={item.title}
                                 description={item.description}
                                 link={item.link ?? null}
+                                exLink={item.exLink ?? null}
                                 linkName="Creative Context"                                
                             />
                         )

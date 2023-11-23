@@ -28,7 +28,7 @@ const routes = [
   { path: '/portfolio', level: 1, name: 'Portfolio', element: <Portfolio />, nodeRef: createRef() },
   { path: '/portfolio/case-study-1', level: 2, name: 'Perspectives', element: <CaseStudyPerspectives />, nodeRef: createRef() },
   { path: '/portfolio/case-study-2', level: 2, name: 'Social Graph', element: <CaseStudySocialGraph />, nodeRef: createRef() },
-  { path: '/showcase', level: 1, name: 'Showcase', element: <Showcase />, nodeRef: createRef() },
+  { path: '/showcase', level: 1, name: 'Fun Stuff', element: <Showcase />, nodeRef: createRef() },
   { path: '/showcase/tdm-sunderland', level: 2, name: 'TDM Ident Animation', element: <CcTdmSunderland />, nodeRef: createRef() }
 ]
 

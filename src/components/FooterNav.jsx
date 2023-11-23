@@ -9,8 +9,8 @@ const FooterNav = () => {
                 <FooterLink to="/portfolio/case-study-1" label="Case Study #1" />
                 <FooterLink to="/portfolio/case-study-2" label="Case Study #2" />
             </FooterLink>
-            <FooterLink to="/showcase" label="Showcase" primary >
-                <FooterLink to="/showcase/tdm-sunderland" label="Showcase #1" />
+            <FooterLink to="/showcase" label="Fun Stuff" primary >
+                <FooterLink to="/showcase/tdm-sunderland" label="Creative context #1" />
             </FooterLink>
         </nav>
     )
