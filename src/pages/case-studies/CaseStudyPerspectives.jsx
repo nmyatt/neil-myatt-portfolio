@@ -52,17 +52,25 @@ const CaseStudyPerspectives = () => {
 
     <P1>I was part of a team that developed widget components that could be aggregated into views called “perspectives”, but outside of using the SDK, there was no easy way to extensively customise them. The team worked on a method that enabled perspectives to be defined as a JSON configuration with options, but this was not end-user facing. My goal was to design an interface that let non-technical users create perspectives for any purpose. The tool had to output a valid JSON configuration that described the interface.</P1>
 
-    <P1>We broke down the process into some key stages: general settings like name, the location it would override. Rules (when it would take effect). Layout (UI) and widgets (adding and configuring widgets). I researched design patterns and found the most intuitive approach would be a wysiwyg editor that had drag and drop. The main page had a library pane, and an inspector pane.</P1>
+    <P1>We broke down the process into logical steps:
+        <ul className="px-8 list-decimal"><li>editing general settings such as the name and behaviour options</li>
+            <li>editing the conditional rules where the override would apply</li>
+            <li>defining the user-interface layout</li>
+            <li>adding and configuring widgets.</li>
+        </ul>
+        <p>In this context, the term 'widget' applies to a configurable component that connects to an API to perform a specific function, such as showing a list of recently modified documents or a summary of workflow tasks.</p>
+        <p>I researched design patterns and found the most intuitive approach would be a WYSIWYG editor that used drag-and-drop. This approach was used in the configuration and layout of widgets, and also to simplify the creation of complex rules.</p>
+        <p>The main interface was based around a library pane, a design area and an inspector pane.</p></P1>
 
     <H2>My Role</H2>
     
-    <P1>My role as Lead UI Developer involved design meetings with stakeholders and organising usability testing of early concepts. I was leading a project team of developers, writers and testers and communicating the design details with technical architects and product owners. Frequent liason with different stakeholders was required, including sprint demos and more formal presentations to senior execs at key stages of the project.</P1>
+    <P1>My role as Lead UI Developer involved design meetings with stakeholders and organising usability testing of early concepts. I was leading a project team of developers, writers and testers and communicating the design details with technical architects and product owners. Frequent liaison with different stakeholders was required, including sprint demos and more formal presentations to senior execs at key stages of the project.</P1>
 
     <H2>Outcomes</H2>
 
-    <P1>The tool was highly successful and has been a key part of selling the SmartUI in new engagements. Presales consultants can develop highly tailored business solutions quickly, and even execs can demo the customisation tools – this was done as part of a keynote demo at the annual enterprise world in Toronto in front of over 1000 people.
+    <P1>The tool was highly successful and has been a key part of selling the SmartUI in new engagements. Pre-sales consultants can develop highly tailored business solutions quickly, and even execs can demo the customisation tools (this was done live as part of a keynote presentation at the annual enterprise world in Toronto, to an audience of over 1000 delegates).
     Throughout the project, we engaged in usability testing and validated the design approach, and feedback from customers has been extremely positive.</P1>
-    <P1>Industry analysts such as Gartner and Forrester place the product highly against competitors such as IBM and Microsoft, and Perspectives play a significant factor in their assessment.</P1>
+    <P1>Industry analysts such as Gartner and Forrester place the product highly against competitors such as IBM and Microsoft, and the Perspectives feature plays a significant factor in their assessment.</P1>
 
 
             </Section1>

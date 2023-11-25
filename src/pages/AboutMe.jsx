@@ -13,11 +13,11 @@ const AboutMe = () => {
 
                 <div className="flex flex-col justify-center items-center"><img className="w-2/3 sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/3 2xl:w-1/4 mb-8" src={avatarMe} alt="a not-very-accurate avatar image of Neil Myatt" /></div>
 
-                <P1>Developers, Product Owners, UX Designers, Business stakeholders and Creatives all talk different languages and sometimes struggle to be understood. I understand them, and try to help avoid ambiguity and misunderstanding across the team.</P1>                            
+                <P1>Developers, product owners, business stakeholders and creatives often talk different languages and sometimes struggle to communicate their domain-specific knowledge. I understand them, and try to help avoid ambiguity and misunderstanding across the team.</P1>                            
 
-                <P1>I'm equally able to talk gestalt principles with a visual designer or mesh topolgy with a 3D designer. I am happy debugging a race-condition with a javascript dev or discussing data architecture with a back-end engineer. I'm an excellent communicator and have frequently presented to C-level execs.</P1>
+                <P1>I'm equally able to talk gestalt principles with a visual designer or mesh topology with a 3D designer. I am happy debugging a race-condition with a javascript dev or discussing data architecture with a back-end engineer. I'm an excellent communicator and have frequently presented to C-level execs.</P1>
 
-                <P1 addClasses="border-l-4 border-blue-700 rounded px-12 py-6 bg-white">I have a lot of experience of working with multi-discplinary teams, using best practices like UX design methodologies and iterative development processes. More recently, i've explored introducing AI into the dev workflow. </P1>
+                <P1 addClasses="border-l-4 border-blue-700 rounded px-12 py-6 bg-white">I have plenty of experience working with multi-disciplinary teams, using best practices like UX design methodologies and iterative development processes. More recently, I've explored introducing AI into the dev workflow.</P1>
 
                 <P1>I'm a dedicated learner, and keep abreast of technology advances. My philosophy is to build as diverse a knowledge base as possible - you never know what piece of obscure knowledge may be useful in a creative project...</P1>
                 
@@ -89,7 +89,7 @@ const AboutMe = () => {
             
             <Section1>
                 <h1 className="my-16 text-6xl leading-none tracking-tight text-zinc-400">One other thing...</h1>
-                <P1>Every photo, illustration, 3D graphic and animation on this site is an original work created by me. I mean, i'm not averse to using stock assets, I just didn't for this site.</P1>    
+                <P1>Every photo, illustration, 3D graphic and animation on this site is an original work created by me. I mean, I'm not averse to using stock assets, I just didn't for this site.</P1>    
             </Section1>
         </PageLayout>
     )

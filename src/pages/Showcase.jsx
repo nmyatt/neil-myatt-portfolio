@@ -17,7 +17,7 @@ const showcaseItems = [
     { 
         image: mipworld,
         title: "Mipworld - game prototype",
-        description: "Just a little prototype of a back-burner game I'm working on.",
+        description: "Just a little character and physics test for a back-burner game I'm working on.",
         exLink: "https://mipworld.vercel.app/"
     },
 

@@ -33,7 +33,7 @@ const portfoliioItems = [
         image: xpression,
         title: "XPression Music Controller",
         vimeo: "883734356",
-        description: "Functional prototype for a mobile app controller that uses Bluetooth MIDI to control music hardware. The prototype was developed using a combination of web texhnologies and Unity in order to create a high fidelity testing experience.",
+        description: "Functional prototype for a mobile app controller that uses Bluetooth MIDI to control music hardware. The prototype was developed using a combination of web technologies and Unity in order to create a high fidelity testing experience.",
         type: "Mobile app",
         role: "Developer, UX Design, UI Design, Prototyping",
     },    
@@ -75,7 +75,7 @@ const Portfolio = () => {
     return(
         <PageLayout title="Project Portfolio">
             <Section1>                
-                <p className="text-2xl mb-8">Some of the projects i've worked on, usually in a principal or lead role.</p>
+                <p className="text-2xl mb-8">Some of the projects I've worked on, usually in a principal or lead role.</p>
                 
                 <div className="grid grid-cols-1 xl:grid-cols-2 xxl:grid-cols-3 gap-8 mt-16">
 

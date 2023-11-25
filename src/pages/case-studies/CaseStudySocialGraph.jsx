@@ -39,7 +39,7 @@ As a senior UI developer within the Research & Development division, I played a 
 
 <P1>Large organisations have millions of documents and many thousands of employees and contractors. Content Server is designed to manage all this information throughout the document lifecycle: this results in a large amount of metadata. The system has many ways to produce reports on the underlying data, but visualising the relationships between data, creators and consumers has always been difficult.</P1>
 
-<P1>I lead a team that was tasked with creating a new a web interface that could enable users to gain business insights about the social connections between creators, the information they created and the people who consume that information. The solution needed to be able to scale effectively for very large deployments, and be usable on a typical office PC without special hardware requirements.</P1>
+<P1>I lead a team tasked with creating a new web interface: a tool that could enable users to gain business insights about the social connections between creators, the information they created and the people who consume that information. The solution needed to be able to scale effectively for very large deployments, and be usable on a typical office PC without special hardware requirements.</P1>
 
 <H2>Design Solution</H2>
 
